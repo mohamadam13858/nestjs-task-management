@@ -13,7 +13,7 @@ export class TasksService {
     }
 
     getTaskById(id: string): Task | undefined {
-       return this.tasks.find((task) => task.id === id)
+        return this.tasks.find((task) => task.id === id)
     }
 
 
@@ -28,5 +28,10 @@ export class TasksService {
 
         this.tasks.push(task)
         return task
+    }
+
+
+    deleteTask(id: string): void {
+      this.tasks = this.tasks.filter((task) => task.id !== id)
     }
 }
