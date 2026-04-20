@@ -12,7 +12,7 @@ export class TasksService {
     }
 
 
-    createTasks(title: string, description: string): Task {
+    createTask(title: string, description: string): Task {
         const task: Task = {
             id: uuid(),
             title,
